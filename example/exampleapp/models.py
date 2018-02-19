@@ -22,7 +22,7 @@ class HideForeignKey(HideField, models.ForeignKey):
 class MyModel(models.Model):
     name = HideCharField(max_length=32)
     text = HideTextField(hide='no-data')
-    parent = HideForeignKey('self', blank=True, null=True, hide='data')
+    parent = HideForeignKey('self', blank=True, null=True, hide='data', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name

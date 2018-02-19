@@ -9,7 +9,7 @@ widget_classes = {}
 
 def widget_factory(cls):
     return widget_classes.setdefault(
-        cls, type(b'Hide_%s' % cls.__name__, (HideWidget, cls), {}))
+        cls, type('Hide_%s' % cls.__name__, (HideWidget, cls), {}))
 
 
 class HideWidget(Widget):
@@ -35,11 +35,11 @@ class HideWidget(Widget):
 
 class HideField(Field):
     def __init__(self, *args, **kwargs):
-        self.hide = kwargs.pop(b'hide', 'closed')
+        self.hide = kwargs.pop('hide', 'closed')
         super(HideField, self).__init__(*args, **kwargs)
 
     def formfield(self, form_class=None, choices_form_class=None, **kwargs):
-        key = kwargs.get(b'widget')
+        key = kwargs.get('widget')
         if not key:
             field = super(HideField, self).formfield(**kwargs)
             key = field.widget.__class__
