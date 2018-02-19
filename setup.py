@@ -16,7 +16,7 @@ setup(
     author='Joerg Breitbart',
     author_email='j.breitbart@netzkolchose.de',
     url='https://github.com/jerch/django-hidefield',
-    download_url='https://github.com/jerch/django-hidefield/archive/0.1.1.tar.gz',
+    download_url='https://github.com/jerch/django-hidefield/archive/0.1.2.tar.gz',
     keywords=['django', 'widget', 'admin', 'field', 'hide'],
     classifiers=[],
 )
