@@ -10,7 +10,7 @@ setup(
     name='django-hidefield',
     packages=find_packages(exclude=['example']),
     include_package_data=True,
-    version='0.1.1',
+    version='0.1.2',
     description='hide fields in django admin',
     long_description=long_description,
     author='Joerg Breitbart',

@@ -9,7 +9,7 @@ widget_classes = {}
 
 def widget_factory(cls):
     return widget_classes.setdefault(
-        cls, type('Hide_%s' % cls.__name__, (HideWidget, cls), {}))
+        cls, type(str('Hide_%s' % cls.__name__), (HideWidget, cls), {}))
 
 
 class HideWidget(Widget):
