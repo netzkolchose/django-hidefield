@@ -4,6 +4,8 @@ Provides a field base class to hide fields in django admin.
 The class turns a field label in an admin edit form into a
 show/hide toggle link.
 
+Tested with Django 1.11.
+
 #### Installation ####
 
 - `pip install django-hidefield`
@@ -33,3 +35,5 @@ class HideCharField(HideField, models.CharField):
 class MyModel(models.Model):
     name = HideCharField(max_length=32, hide='data')
 ```
+
+See `exampleapp` for more examples.
