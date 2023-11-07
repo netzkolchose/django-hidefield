@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
 from django.db.models.fields import Field
 from django.forms.widgets import Widget
+
 
 # cache for created widget classes
 widget_classes = {}
@@ -35,7 +34,7 @@ class HideWidget(Widget):
 
 class HideField(Field):
     def __init__(self, *args, **kwargs):
-        self.hide = kwargs.pop('hide', 'closed')
+        self.hide = kwargs.pop('hide', 'data')
         super(HideField, self).__init__(*args, **kwargs)
 
     def formfield(self, form_class=None, choices_form_class=None, **kwargs):
